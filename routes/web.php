@@ -1,11 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-Route::get('/', function () {
-    return view('index');
-});
+use App\Http\Controllers\MainController;
 
 Route::get('/', [MainController::class, 'index']);
 Route::get('/categories', [MainController::class, 'categories']);
-Route::get('/mobiles{product}', [MainController::class, 'product']);
+Route::get('/mobiles/{product}', [MainController::class, 'product']);

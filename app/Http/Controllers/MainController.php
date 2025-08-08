@@ -14,7 +14,7 @@ class MainController extends Controller
         return view('categories');
     }
 
-    public function product() {
+    public function product($product) {
         return view('product');
     }
 }
